@@ -1,0 +1,17 @@
+﻿@{
+    string[] flowers = ViewBag.Flowers as string[];
+}
+
+<h1>The Flowers are</h1>
+
+@if (flowers != null)
+{
+    foreach (var flower in flowers)
+    {
+        <p>@flower</p>
+    }
+}
+else
+{
+    <p>No flowers available.</p>
+}
