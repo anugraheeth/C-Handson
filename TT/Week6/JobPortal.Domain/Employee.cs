@@ -1,0 +1,28 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace JobPortal.Domain
+{
+    public class Employee
+    {
+        [Key]
+        [Column(TypeName = "char")]
+        [StringLength(5)]
+        public string EmployeeId { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [StringLength(50)]
+        public string EmployeeName { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [StringLength(50)]
+        public string EmployeeEmail { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [StringLength(50)]
+        public string EmployeePhone { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [StringLength(50)]
+        public string Organization { get; set; }
+    }
+}
