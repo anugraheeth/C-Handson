@@ -1,0 +1,14 @@
+﻿@model TaskItem.Models.TaskItems
+@{
+    ViewData["Title"] = "Create Task Item";
+}
+
+<h1>Create Task Item</h1>
+
+<form asp-action="Create" method="post">
+    @await Html.PartialAsync("_TaskItemDetails")
+    <div>
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>

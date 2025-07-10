@@ -1,0 +1,51 @@
+﻿@model TaskItem.Models.TaskItems
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tasks</h1>
+
+<div>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayName("Status")
+            </th>
+            <th>
+                @Html.DisplayName("Actions")
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @* @foreach (var item in TaskItems)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsCompleted)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        } *@
+    </tbody>
+</table>
